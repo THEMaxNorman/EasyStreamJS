@@ -1,0 +1,212 @@
+<head> 
+	<title>Soccer</title>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: "Montserrat", "Arial";
+  color: white;
+  background-color: #444;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction:row;
+}
+
+.scoreboard > * {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  height: 50px;
+  font-weight: bold;
+}
+
+.scoreboard > *:first-child {
+  border-left: 1px solid white;
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.team-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-detail {
+  padding: 0em 0.5em;
+}
+
+.team-detail {
+  font-size: 1.5em;
+}
+
+.team-detail .team-nameandscore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.team-detail .team-thisgame {
+  width: 150px;
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #222;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.timer-container > * {
+  border-right: 1px solid white;
+  padding: 0em 1em;
+  color: white;
+}
+
+.timer-container > *:last-child {
+  border-right: 0;
+  color: yellow;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0em 0.5em;
+  background-color: black;
+}
+
+.logo img {
+  width: 100px;
+}
+
+/* Game */
+
+
+</style>
+<button><a href = 'index.html'> Back</a></button>
+<br>
+<br>
+<br>
+
+<div class="scoreboard">
+   <div class="team team-a houston" id = 'hbg'>
+      <div class="team-logo">
+      </div>
+      <div class="team-detail">
+         <div class="team-nameandscore">
+            <div class="team-name" contenteditable="true">
+               Home 
+            </div>
+	    <br>
+            <div id = 'hscore' class="team-score">
+               0
+            </div>
+
+         </div>
+<div class="team-thisgame">
+            <div class="team-times">
+               
+            </div>
+            <div class="team-bonus">
+               
+            </div>
+      </div>
+   </div>
+   <div class="team team-b dallas" id = 'abg'>
+      <div class="team-logo">
+      </div>
+      <div class="team-detail">
+         <div class="team-nameandscore">
+            <div class="team-name" contenteditable="true">
+               Away
+            </div>
+            <div id = 'ascore' class="team-score">
+               0
+            </div>
+         </div>
+	 <div class="team-thisgame">
+            <div class="team-times">
+               
+            </div>
+            <div class="team-bonus">
+               
+            </div>
+      </div>
+   </div>
+   <div class="timer">
+      <div class="timer-container">
+          <div class="quarter" contenteditable="true">
+              1st
+          </div>
+          <div class="time" id = "countdown">
+              10:00
+          </div>
+      </div> 
+   </div>
+   <div class="logo">
+      <img src="https://i.ibb.co/BNMxZHR/logo-long.png"/>
+   </div>
+</div>
+
+<hr/>
+   </div>
+</div>
+</div>
+</div>
+</div>
+   <br>
+   <br>
+   <div class = 'bottom-anchor'>
+ <button class="start">Start</button>
+    <button class="pause">Pause</button>
+    <button class="reset">Reset</button>
+    <button id = 'sub_btn' >-1 Sec</button>
+    <button id = 'add_btn' >+1 Sec</button>
+    <br>
+ <button id = 'acountuButton'>Away +1 </button>
+ <button id = 'acountDButton'>Away -1 </button>
+ <button id = 'countuButton'>Home +1 </button>
+ <button id = 'countDButton'>Home -1 </button>
+    <button id = 'resetBtn';>Reset</button>
+    <br>
+
+
+<div>
+    <input type="color" id="home" name="home"
+           value="#e66465">
+    <label for="home">Home</label>
+</div>
+
+<div>
+    <input type="color" id="away" name="away"
+            value="#f6b73c">
+    <label for="away">Away</label>
+    
+</div>
+       <script src = './soccer_controls.js'></script>
+       <br>
+    <br>
+       <button id = "export_btn" onclick = "rexport()">Get Export Code</button>
+<br>
+    <br>
+   </div>
+    
