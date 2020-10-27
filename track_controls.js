@@ -3,10 +3,10 @@ function rexport(){
     //var datta = maxport({{element.1}}); 
     //alert(datta)
 }
-function maxport(static, all_colors){
+function maxport(static, all_colors, count){
     var end_val = ""
    	
-    end_val += getAllLabels(labels, all_colors );
+    end_val += getAllLabels(count, all_colors );
     //static.replace(" , ", "|")
     end_val += static
     
